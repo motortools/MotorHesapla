@@ -2,13 +2,172 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Motor Hesapla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motosiklet Lastik Basıncı Hesaplama | Motor Hesapla</title>
+    <meta name="description" content="Motosiklet lastik basıncı hesaplama aracı. Ön ve arka lastik basıncını PSI, bar ve kg/cm² olarak hesaplayın.">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 25px;
+            background: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        #sonuc {
+            margin-top: 25px;
+            padding: 15px;
+            background: #eee;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .uyari {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Motor Hesapla</h1>
+<div class="container">
 
-    <p>Motor hesaplama araçları yakında burada!</p>
+    <h1>🏍️ Motosiklet Lastik Basıncı Hesaplama</h1>
+
+    <p>
+        Motosikletiniz için önerilen lastik basıncını farklı ölçü birimlerinde
+        görüntüleyin.
+    </p>
+
+    <label for="on">Ön Lastik Basıncı</label>
+    <input type="number" id="on" placeholder="Örn: 2.1" step="0.1">
+
+    <label for="arka">Arka Lastik Basıncı</label>
+    <input type="number" id="arka" placeholder="Örn: 2.3" step="0.1">
+
+    <label for="birim">Girdi Birimi</label>
+    <select id="birim">
+        <option value="bar">Bar</option>
+        <option value="psi">PSI</option>
+        <option value="kg">kg/cm²</option>
+    </select>
+
+    <button onclick="hesapla()">Basıncı Hesapla</button>
+
+    <div id="sonuc"></div>
+
+    <div class="uyari">
+        ⚠️ Bu araç genel hesaplama amacıyla hazırlanmıştır.
+        Motosikletiniz için doğru lastik basıncı konusunda üreticinin
+        kullanım kılavuzundaki değerleri esas alın.
+    </div>
+
+</div>
+
+<script>
+function hesapla() {
+
+    let on = parseFloat(document.getElementById("on").value);
+    let arka = parseFloat(document.getElementById("arka").value);
+    let birim = document.getElementById("birim").value;
+
+    if (isNaN(on) || isNaN(arka)) {
+        alert("Lütfen ön ve arka lastik basıncını girin.");
+        return;
+    }
+
+    let onBar;
+    let arkaBar;
+
+    if (birim === "bar") {
+        onBar = on;
+        arkaBar = arka;
+    }
+
+    if (birim === "psi") {
+        onBar = on / 14.5038;
+        arkaBar = arka / 14.5038;
+    }
+
+    if (birim === "kg") {
+        onBar = on * 0.980665;
+        arkaBar = arka * 0.980665;
+    }
+
+    let onPsi = onBar * 14.5038;
+    let arkaPsi = arkaBar * 14.5038;
+
+    let onKg = onBar / 0.980665;
+    let arkaKg = arkaBar / 0.980665;
+
+    document.getElementById("sonuc").style.display = "block";
+
+    document.getElementById("sonuc").innerHTML = `
+        <strong>Sonuç:</strong><br><br>
+
+        🛞 Ön Lastik:<br>
+        ${onBar.toFixed(2)} bar |
+        ${onPsi.toFixed(1)} PSI |
+        ${onKg.toFixed(2)} kg/cm²
+
+        <br><br>
+
+        🛞 Arka Lastik:<br>
+        ${arkaBar.toFixed(2)} bar |
+        ${arkaPsi.toFixed(1)} PSI |
+        ${arkaKg.toFixed(2)} kg/cm²
+    `;
+}
+</script>
 
 </body>
 </html>
