@@ -1,172 +1,523 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motosiklet Lastik Basıncı Hesaplama | Motor Hesapla</title>
-    <meta name="description" content="Motosiklet lastik basıncı hesaplama aracı. Ön ve arka lastik basıncını PSI, bar ve kg/cm² olarak hesaplayın.">
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+<title>Motosiklet Lastik Basıncı | Motor Hesapla</title>
 
-        h1 {
-            text-align: center;
-            color: #222;
-        }
+<meta name="description" content="Motosiklet lastik basıncı rehberi. Marka ve model seçerek ön ve arka lastik basıncını PSI, bar ve kg/cm² olarak öğrenin.">
 
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        label {
-            display: block;
-            margin-top: 20px;
-            font-weight: bold;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #222;
+}
 
-        input, select, button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 8px;
-            box-sizing: border-box;
-            font-size: 16px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
+header {
+    background: #111;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
 
-        button {
-            margin-top: 25px;
-            background: #222;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
 
-        button:hover {
-            background: #444;
-        }
+header p {
+    margin: 8px 0 0;
+    color: #ccc;
+}
 
-        #sonuc {
-            margin-top: 25px;
-            padding: 15px;
-            background: #eee;
-            border-radius: 8px;
-            display: none;
-        }
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
 
-        .uyari {
-            margin-top: 25px;
-            font-size: 14px;
-            color: #777;
-        }
-    </style>
+.search {
+    width: 100%;
+    padding: 15px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.brand {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.brand-button {
+    width: 100%;
+    border: 0;
+    background: white;
+    padding: 20px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.brand-button:hover {
+    background: #f5f5f5;
+}
+
+.models {
+    display: none;
+    padding: 0 15px 15px;
+}
+
+.model {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+.model:hover {
+    background: #eee;
+}
+
+.result {
+    display: none;
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.result h2 {
+    margin-top: 0;
+}
+
+.pressures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pressure-box {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pressure-box h3 {
+    margin-top: 0;
+}
+
+.pressure {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff7d6;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.unit-box {
+    margin-top: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .pressures {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
+</style>
 </head>
 
 <body>
 
+<header>
+    <h1>🏍️ Motor Hesapla</h1>
+    <p>Motosiklet lastik basıncı rehberi</p>
+</header>
+
 <div class="container">
 
-    <h1>🏍️ Motosiklet Lastik Basıncı Hesaplama</h1>
+    <input
+        type="text"
+        id="search"
+        class="search"
+        placeholder="🔎 Motor ara... Örn: MT-07, SH300"
+        oninput="searchMotor()"
+    >
 
-    <p>
-        Motosikletiniz için önerilen lastik basıncını farklı ölçü birimlerinde
-        görüntüleyin.
-    </p>
+    <div id="brands"></div>
 
-    <label for="on">Ön Lastik Basıncı</label>
-    <input type="number" id="on" placeholder="Örn: 2.1" step="0.1">
+    <div class="result" id="result">
 
-    <label for="arka">Arka Lastik Basıncı</label>
-    <input type="number" id="arka" placeholder="Örn: 2.3" step="0.1">
+        <h2 id="modelName"></h2>
 
-    <label for="birim">Girdi Birimi</label>
-    <select id="birim">
-        <option value="bar">Bar</option>
-        <option value="psi">PSI</option>
-        <option value="kg">kg/cm²</option>
-    </select>
+        <div class="unit-box">
+            <label><strong>Gösterim birimi</strong></label>
 
-    <button onclick="hesapla()">Basıncı Hesapla</button>
+            <select id="unit" onchange="changeUnit()">
+                <option value="psi">PSI</option>
+                <option value="bar">Bar</option>
+                <option value="kg">kg/cm²</option>
+            </select>
+        </div>
 
-    <div id="sonuc"></div>
+        <div class="pressures">
 
-    <div class="uyari">
-        ⚠️ Bu araç genel hesaplama amacıyla hazırlanmıştır.
-        Motosikletiniz için doğru lastik basıncı konusunda üreticinin
-        kullanım kılavuzundaki değerleri esas alın.
+            <div class="pressure-box">
+                <h3>🛞 Ön Lastik</h3>
+                <div class="pressure" id="front"></div>
+            </div>
+
+            <div class="pressure-box">
+                <h3>🛞 Arka Lastik</h3>
+                <div class="pressure" id="rear"></div>
+            </div>
+
+        </div>
+
+        <div class="info">
+            ⚠️ <strong>Önemli:</strong> Bu değerler soğuk lastik basıncı
+            için verilmiştir. En doğru değer için motosikletinizin kullanım
+            kılavuzunu ve motosiklet üzerindeki üretici etiketini kontrol edin.
+        </div>
+
+        <p id="source"></p>
+
     </div>
 
 </div>
 
+<footer>
+    Motor Hesapla © 2026
+</footer>
+
 <script>
-function hesapla() {
 
-    let on = parseFloat(document.getElementById("on").value);
-    let arka = parseFloat(document.getElementById("arka").value);
-    let birim = document.getElementById("birim").value;
+const motorcycles = [
 
-    if (isNaN(on) || isNaN(arka)) {
-        alert("Lütfen ön ve arka lastik basıncını girin.");
+    {
+        brand: "Honda",
+        model: "SH300",
+        front: 29,
+        rear: 36,
+        source: "Honda SH300 kullanım kılavuzu"
+    },
+
+    {
+        brand: "Yamaha",
+        model: "MT-07",
+        front: 33,
+        rear: 36,
+        source: "Yamaha MT-07 kullanım kılavuzu"
+    },
+
+    {
+        brand: "Yamaha",
+        model: "Yamaha örnek model",
+        front: 33,
+        rear: 36,
+        source: "Yamaha kullanım kılavuzu"
+    },
+
+    {
+        brand: "Mondial",
+        model: "125 Drift L",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "Honda",
+        model: "PCX 125",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "Honda",
+        model: "CB125F",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "Yamaha",
+        model: "MT-125",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "Yamaha",
+        model: "R25",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "KTM",
+        model: "Duke 390",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "CFMOTO",
+        model: "250 SR",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "Bajaj",
+        model: "Pulsar NS200",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "TVS",
+        model: "Apache RTR 200",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "Suzuki",
+        model: "GSX-R125",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    },
+
+    {
+        brand: "Kawasaki",
+        model: "Ninja 400",
+        front: null,
+        rear: null,
+        source: "Üretici değerinin doğrulanması bekleniyor"
+    }
+
+];
+
+let selectedMotor = null;
+
+function loadBrands() {
+
+    const brandsDiv = document.getElementById("brands");
+
+    const brands = [...new Set(
+        motorcycles.map(motor => motor.brand)
+    )];
+
+    brandsDiv.innerHTML = "";
+
+    brands.forEach(brand => {
+
+        const brandDiv = document.createElement("div");
+        brandDiv.className = "brand";
+
+        const button = document.createElement("button");
+        button.className = "brand-button";
+        button.innerText = "🏍️ " + brand + " ▾";
+
+        const modelsDiv = document.createElement("div");
+        modelsDiv.className = "models";
+
+        motorcycles
+            .filter(motor => motor.brand === brand)
+            .forEach(motor => {
+
+                const modelButton = document.createElement("button");
+
+                modelButton.className = "model";
+                modelButton.innerText = motor.model;
+
+                modelButton.onclick = function() {
+                    showMotor(motor);
+                };
+
+                modelsDiv.appendChild(modelButton);
+            });
+
+        button.onclick = function() {
+
+            if (modelsDiv.style.display === "block") {
+                modelsDiv.style.display = "none";
+            } else {
+                modelsDiv.style.display = "block";
+            }
+
+        };
+
+        brandDiv.appendChild(button);
+        brandDiv.appendChild(modelsDiv);
+
+        brandsDiv.appendChild(brandDiv);
+    });
+}
+
+function showMotor(motor) {
+
+    selectedMotor = motor;
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("modelName").innerText =
+        motor.brand + " " + motor.model;
+
+    document.getElementById("source").innerText =
+        "📖 Kaynak: " + motor.source;
+
+    if (motor.front === null || motor.rear === null) {
+
+        document.getElementById("front").innerText = "Yakında";
+        document.getElementById("rear").innerText = "Yakında";
+
+    } else {
+
+        changeUnit();
+    }
+
+    document.getElementById("result").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function changeUnit() {
+
+    if (!selectedMotor) return;
+
+    if (selectedMotor.front === null) return;
+
+    const unit = document.getElementById("unit").value;
+
+    let front;
+    let rear;
+    let symbol;
+
+    if (unit === "psi") {
+
+        front = selectedMotor.front;
+        rear = selectedMotor.rear;
+        symbol = "PSI";
+
+    } else if (unit === "bar") {
+
+        front = selectedMotor.front / 14.5038;
+        rear = selectedMotor.rear / 14.5038;
+        symbol = "bar";
+
+    } else {
+
+        front = selectedMotor.front / 14.2233;
+        rear = selectedMotor.rear / 14.2233;
+        symbol = "kg/cm²";
+    }
+
+    document.getElementById("front").innerText =
+        front.toFixed(2) + " " + symbol;
+
+    document.getElementById("rear").innerText =
+        rear.toFixed(2) + " " + symbol;
+}
+
+function searchMotor() {
+
+    const search = document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const brandsDiv = document.getElementById("brands");
+
+    if (search === "") {
+
+        loadBrands();
         return;
     }
 
-    let onBar;
-    let arkaBar;
+    const results = motorcycles.filter(motor =>
+        (motor.brand + " " + motor.model)
+        .toLowerCase()
+        .includes(search)
+    );
 
-    if (birim === "bar") {
-        onBar = on;
-        arkaBar = arka;
-    }
+    brandsDiv.innerHTML = "";
 
-    if (birim === "psi") {
-        onBar = on / 14.5038;
-        arkaBar = arka / 14.5038;
-    }
+    results.forEach(motor => {
 
-    if (birim === "kg") {
-        onBar = on * 0.980665;
-        arkaBar = arka * 0.980665;
-    }
+        const button = document.createElement("button");
 
-    let onPsi = onBar * 14.5038;
-    let arkaPsi = arkaBar * 14.5038;
+        button.className = "model";
+        button.innerText =
+            "🏍️ " + motor.brand + " " + motor.model;
 
-    let onKg = onBar / 0.980665;
-    let arkaKg = arkaBar / 0.980665;
+        button.onclick = function() {
+            showMotor(motor);
+        };
 
-    document.getElementById("sonuc").style.display = "block";
+        brandsDiv.appendChild(button);
+    });
 
-    document.getElementById("sonuc").innerHTML = `
-        <strong>Sonuç:</strong><br><br>
-
-        🛞 Ön Lastik:<br>
-        ${onBar.toFixed(2)} bar |
-        ${onPsi.toFixed(1)} PSI |
-        ${onKg.toFixed(2)} kg/cm²
-
-        <br><br>
-
-        🛞 Arka Lastik:<br>
-        ${arkaBar.toFixed(2)} bar |
-        ${arkaPsi.toFixed(1)} PSI |
-        ${arkaKg.toFixed(2)} kg/cm²
-    `;
 }
+
+loadBrands();
+
 </script>
 
 </body>
