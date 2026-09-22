@@ -1,690 +1,1654 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motorsiklet Lastik Basıncı Rehberi 2025 | Marka & Model Sorgulama</title>
-    <meta name="description" content="Türkiye'deki en popüler motorsikletlerin (Honda PCX, Yamaha XMAX, Bajaj Pulsar, CF Moto vb.) doğru ön ve arka lastik basıncı (PSI) değerleri. AdSense ve SEO uyumlu motorsiklet lastik basınç tablosu.">
-    <meta name="keywords" content="motorsiklet lastik basıncı, lastik havası kaç olmalı, honda pcx lastik basıncı, yamaha xmax lastik basıncı, bajaj pulsar basınç, cf moto lastik basıncı, psi değerleri">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        /* ========== CORE VARIABLES & RESET ========== */
-        :root {
-            --bg-base: #060608;
-            --bg-surface: #101016;
-            --bg-surface-hover: #171720;
-            --bg-card: rgba(22, 22, 31, 0.6);
-            --bg-glass: rgba(16, 16, 22, 0.85);
-            
-            --text-primary: #f8f8fc;
-            --text-secondary: #a0a0b5;
-            --text-tertiary: #6e6e80;
-            
-            --accent-main: #3b82f6; /* Premium Blue */
-            --accent-glow: #60a5fa;
-            --accent-purple: #8b5cf6;
-            --accent-pink: #ec4899;
-            
-            --gradient-text: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
-            --gradient-card: linear-gradient(145deg, rgba(59, 130, 246, 0.08) 0%, rgba(139, 92, 246, 0.03) 100%);
-            
-            --border-light: rgba(255, 255, 255, 0.05);
-            --border-hover: rgba(59, 130, 246, 0.3);
-            
-            --radius-md: 14px;
-            --radius-lg: 20px;
-            --radius-xl: 30px;
-            
-            --shadow-float: 0 10px 40px -10px rgba(0,0,0,0.5);
-            --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.2);
-            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; font-size: 16px; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-base);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
-            background-attachment: fixed;
-        }
+<title>Motosiklet Lastik Basıncı | Marka ve Model Sorgulama</title>
 
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        
-        /* ========== HEADER ========== */
-        .header {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: var(--bg-glass);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border-light);
-            transition: var(--transition);
-        }
-        .header.scrolled { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); padding: 5px 0; }
-        .header-inner {
-            display: flex; align-items: center; justify-content: space-between;
-            height: 80px; transition: var(--transition); gap: 20px;
-        }
-        .header.scrolled .header-inner { height: 64px; }
-        .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-        .logo-icon {
-            width: 44px; height: 44px; border-radius: 12px;
-            background: linear-gradient(135deg, var(--accent-main), var(--accent-purple));
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: var(--shadow-glow); color: white;
-        }
-        .logo-text h1 {
-            font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800;
-            background: var(--text-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            line-height: 1; letter-spacing: -0.02em;
-        }
-        .logo-sub { font-size: 0.75rem; color: var(--accent-glow); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+<meta name="description" content="Honda, Yamaha, Mondial, RKS, Bajaj, CFMOTO, TVS, Kuba, SYM, Suzuki ve Kawasaki motosikletlerin lastik basıncı değerlerini marka ve modele göre bulun.">
+<meta name="keywords" content="motosiklet lastik basıncı, motosiklet lastik havası, lastik basıncı kaç olmalı, Honda lastik basıncı, Yamaha lastik basıncı, Mondial Drift L lastik basıncı, Bajaj NS200 lastik basıncı, TVS Raider lastik basıncı">
+<meta name="robots" content="index, follow">
 
-        .search-container { flex: 1; max-width: 500px; position: relative; }
-        .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 20px; color: var(--text-tertiary); }
-        .search-input {
-            width: 100%; padding: 14px 20px 14px 48px;
-            background: var(--bg-surface); border: 1px solid var(--border-light);
-            border-radius: 100px; color: var(--text-primary); font-family: inherit; font-size: 0.95rem;
-            transition: var(--transition); box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
-        }
-        .search-input:focus { border-color: var(--accent-main); box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15); outline: none; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-        /* ========== HERO SECTION ========== */
-        .hero { padding: 160px 20px 80px; text-align: center; position: relative; }
-        .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 8px 20px; background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 100px;
-            color: var(--accent-glow); font-size: 0.85rem; font-weight: 600; margin-bottom: 24px;
-        }
-        .hero-title {
-            font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.03em;
-        }
-        .text-gradient { background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-desc { font-size: 1.15rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 40px; line-height: 1.7; }
-        
-        .stats-wrap {
-            display: inline-flex; align-items: center; gap: 40px; padding: 24px 48px;
-            background: var(--bg-surface); border: 1px solid var(--border-light);
-            border-radius: var(--radius-xl); box-shadow: var(--shadow-float);
-        }
-        .stat-item { display: flex; flex-direction: column; align-items: center; }
-        .stat-num { font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--text-primary); }
-        .stat-label { font-size: 0.8rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-        .stat-div { width: 1px; height: 50px; background: var(--border-light); }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        /* ========== ADSENSE SLOTS ========== */
-        .ads-container {
-            width: 100%; max-width: 1200px; margin: 40px auto;
-            background: var(--bg-surface); border: 1px dashed var(--border-light);
-            border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
-            min-height: 100px; color: var(--text-tertiary); font-size: 0.85rem;
-            position: relative; overflow: hidden;
-        }
-        .ads-container::before { content: 'Reklam Alanı (AdSense)'; position: absolute; }
+:root {
+    --bg: #080a0f;
+    --bg2: #0d1017;
+    --card: #11151e;
+    --card2: #161b25;
+    --border: #242b38;
+    --text: #f4f6f8;
+    --muted: #8d96a5;
+    --accent: #ff6b35;
+    --accent2: #ff8a5b;
+    --green: #35d07f;
+}
 
-        /* ========== CATEGORY FILTERS ========== */
-        .filters-wrapper {
-            position: sticky; top: 80px; z-index: 90;
-            background: var(--bg-base); padding: 20px 0;
-            border-bottom: 1px solid var(--border-light); margin-bottom: 40px;
-        }
-        .filters {
-            display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;
-            scrollbar-width: none; -ms-overflow-style: none;
-        }
-        .filters::-webkit-scrollbar { display: none; }
-        .filter-btn {
-            padding: 10px 22px; background: var(--bg-surface);
-            border: 1px solid var(--border-light); border-radius: 100px;
-            color: var(--text-secondary); font-family: inherit; font-weight: 500; font-size: 0.9rem;
-            cursor: pointer; white-space: nowrap; transition: var(--transition);
-            display: flex; align-items: center; gap: 8px;
-        }
-        .filter-btn:hover { background: var(--bg-surface-hover); color: var(--text-primary); }
-        .filter-btn.active {
-            background: var(--text-primary); color: var(--bg-base); border-color: var(--text-primary);
-            box-shadow: 0 4px 15px rgba(255,255,255,0.15); font-weight: 600;
-        }
+body {
+    background:
+        radial-gradient(circle at 50% -10%, rgba(255,107,53,.12), transparent 35%),
+        var(--bg);
+    color: var(--text);
+    font-family: Inter, sans-serif;
+    min-height: 100vh;
+}
 
-        /* ========== BRANDS GRID ========== */
-        .brands-grid { display: grid; gap: 24px; padding-bottom: 40px; }
-        .brand-card {
-            background: var(--bg-card); border: 1px solid var(--border-light);
-            border-radius: var(--radius-lg); overflow: hidden; backdrop-filter: blur(10px);
-            transition: var(--transition);
-        }
-        .brand-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-float); }
-        .brand-header {
-            padding: 24px; display: flex; align-items: center; justify-content: space-between;
-            cursor: pointer; user-select: none;
-        }
-        .brand-header:hover { background: rgba(255,255,255,0.02); }
-        .brand-info { display: flex; align-items: center; gap: 20px; }
-        .brand-logo {
-            width: 60px; height: 60px; border-radius: 16px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.8rem; font-weight: 900; font-family: 'Outfit', sans-serif; color: white;
-            box-shadow: inset 0 -4px 10px rgba(0,0,0,0.2);
-        }
-        .brand-text h3 { font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 4px; }
-        .brand-tags { display: flex; gap: 10px; align-items: center; }
-        .tag { font-size: 0.75rem; padding: 4px 12px; border-radius: 100px; font-weight: 500; background: var(--bg-surface); color: var(--text-secondary); }
-        
-        .toggle-icon {
-            width: 40px; height: 40px; border-radius: 50%; background: var(--bg-surface);
-            display: flex; align-items: center; justify-content: center; color: var(--text-secondary);
-            transition: var(--transition);
-        }
-        .brand-card.open .toggle-icon { transform: rotate(180deg); background: var(--accent-main); color: white; box-shadow: var(--shadow-glow); }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,10,15,.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
 
-        .models-container { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
-        .brand-card.open .models-container { max-height: 10000px; }
-        .models-inner { padding: 0 24px 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+.nav {
+    max-width: 1180px;
+    margin: auto;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-        /* ========== MODEL CARD ========== */
-        .model-card {
-            background: var(--bg-surface); border: 1px solid var(--border-light);
-            border-radius: var(--radius-md); padding: 20px; transition: var(--transition);
-        }
-        .model-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.1); box-shadow: var(--shadow-float); }
-        .model-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
-        .model-name { font-weight: 700; font-size: 1.1rem; color: var(--text-primary); font-family: 'Outfit', sans-serif; margin-bottom: 6px; }
-        
-        .type-badge {
-            font-size: 0.7rem; padding: 4px 10px; border-radius: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
-        }
-        .type-scooter { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
-        .type-commuter { background: rgba(16, 185, 129, 0.15); color: #34d399; }
-        .type-sport { background: rgba(236, 72, 153, 0.15); color: #f472b6; }
-        .type-naked { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
-        .type-touring { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
-        .type-adventure { background: rgba(217, 119, 6, 0.15); color: #f59e0b; }
-        .type-cruiser { background: rgba(239, 68, 68, 0.15); color: #f87171; }
-        .type-enduro { background: rgba(20, 184, 166, 0.15); color: #2dd4bf; }
+.logo {
+    font-family: Outfit, sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    white-space: nowrap;
+}
 
-        .pressures { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
-        .pressure-box {
-            background: var(--bg-base); border-radius: 10px; padding: 12px; text-align: center;
-            border: 1px solid var(--border-light);
-        }
-        .pressure-box.front { border-bottom: 2px solid var(--accent-glow); }
-        .pressure-box.rear { border-bottom: 2px solid var(--accent-pink); }
-        .p-label { font-size: 0.7rem; color: var(--text-tertiary); font-weight: 600; text-transform: uppercase; margin-bottom: 4px; }
-        .p-val { font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
-        .p-unit { font-size: 0.7rem; color: var(--text-secondary); font-weight: 500; }
-        
-        .tire-info {
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-            font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.02);
-            padding: 8px; border-radius: 8px;
-        }
+.logo span {
+    color: var(--accent);
+}
 
-        /* ========== FAQ SECTION (SEO) ========== */
-        .seo-section { padding: 60px 0; margin-top: 40px; border-top: 1px solid var(--border-light); }
-        .seo-title { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 30px; text-align: center; }
-        .faq-grid { display: grid; gap: 16px; max-width: 900px; margin: 0 auto; }
-        .faq-item {
-            background: var(--bg-surface); border: 1px solid var(--border-light);
-            border-radius: var(--radius-md); overflow: hidden;
-        }
-        .faq-q {
-            padding: 20px; font-weight: 600; font-size: 1.05rem; cursor: pointer;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .faq-q:hover { background: var(--bg-surface-hover); }
-        .faq-a {
-            padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
-            color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;
-        }
-        .faq-item.open .faq-a { padding: 0 20px 20px; max-height: 400px; }
-        .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent-main); }
+.search {
+    position: relative;
+    width: 330px;
+}
 
-        /* ========== FOOTER ========== */
-        .footer { padding: 40px 0; border-top: 1px solid var(--border-light); text-align: center; }
-        .footer p { color: var(--text-tertiary); font-size: 0.85rem; margin-bottom: 10px; }
-        .footer-links { display: flex; justify-content: center; gap: 20px; }
-        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
-        .footer-links a:hover { color: var(--accent-main); }
+.search input {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px 12px 42px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero { padding: 120px 20px 40px; }
-            .hero-title { font-size: 2rem; }
-            .stats-wrap { flex-direction: column; gap: 20px; padding: 24px; width: 100%; }
-            .stat-div { width: 100%; height: 1px; }
-            .filters-wrapper { top: 64px; }
-            .models-inner { grid-template-columns: 1fr; }
-            .header-inner { flex-wrap: wrap; height: auto; padding: 15px 0; }
-            .header.scrolled .header-inner { height: auto; }
-            .search-container { max-width: 100%; width: 100%; order: 3; margin-top: 10px; }
-        }
-    </style>
+.search input:focus {
+    border-color: var(--accent);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 11px;
+    color: var(--muted);
+}
+
+.hero {
+    max-width: 1000px;
+    margin: 70px auto 45px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255,107,53,.3);
+    background: rgba(255,107,53,.08);
+    color: var(--accent2);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: Outfit, sans-serif;
+    font-size: clamp(35px, 6vw, 62px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.stats {
+    max-width: 800px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 17px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 25px;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.stat span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.ad {
+    max-width: 900px;
+    height: 90px;
+    margin: 25px auto;
+    border: 1px dashed #2b3341;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #596273;
+    font-size: 12px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 0 20px 70px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 35px 0 20px;
+}
+
+.filter {
+    background: var(--card);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 9px 14px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: .2s;
+}
+
+.filter:hover,
+.filter.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.brand-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.brand-header {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.brand-header:hover {
+    background: var(--card2);
+}
+
+.brand-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: Outfit, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.brand-count {
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    background: #1b212c;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.arrow {
+    transition: .25s;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.brand-card.open .arrow {
+    transform: rotate(180deg);
+}
+
+.models {
+    display: none;
+    border-top: 1px solid var(--border);
+    padding: 10px;
+}
+
+.brand-card.open .models {
+    display: block;
+}
+
+.model-item {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.model-item:last-child {
+    margin-bottom: 0;
+}
+
+.model-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    cursor: pointer;
+    background: rgba(255,255,255,.015);
+}
+
+.model-header:hover {
+    background: rgba(255,255,255,.04);
+}
+
+.model-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.type-badge {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 10px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    color: #d8dee8;
+    background: #222a36;
+}
+
+.model-toggle {
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.pressure-container {
+    display: none;
+    padding: 10px 14px 16px;
+}
+
+.model-item.open .pressure-container {
+    display: block;
+}
+
+.pressure-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.pressure-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    background: #0d1118;
+}
+
+.pressure-label {
+    color: var(--muted);
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.pressure-value {
+    font-family: Outfit, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.pressure-unit {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.pressure-bar {
+    font-size: 12px;
+    color: #c7ced9;
+    margin-top: 5px;
+}
+
+.tire-size {
+    margin-top: 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px;
+    color: #aeb6c3;
+    font-size: 12px;
+    text-align: center;
+}
+
+.warning {
+    margin-top: 10px;
+    padding: 11px 12px;
+    border-radius: 9px;
+    background: rgba(255,193,7,.05);
+    border: 1px solid rgba(255,193,7,.16);
+    color: #aeb6c3;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.no-result {
+    text-align: center;
+    padding: 45px 20px;
+    color: var(--muted);
+    display: none;
+}
+
+.section-title {
+    font-family: Outfit, sans-serif;
+    font-size: 25px;
+    margin: 60px 0 18px;
+}
+
+.faq {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 13px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+
+.faq-q {
+    padding: 17px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-a {
+    display: none;
+    padding: 0 17px 17px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+.faq.open .faq-a {
+    display: block;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 35px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+footer strong {
+    color: var(--text);
+}
+
+@media(max-width:700px) {
+    .nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .hero {
+        margin-top: 45px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .pressure-details {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:430px) {
+    .pressure-value {
+        font-size: 25px;
+    }
+
+    .filter {
+        font-size: 12px;
+        padding: 8px 11px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container header-inner">
-            <a href="#" class="logo">
-                <div class="logo-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
-                </div>
-                <div class="logo-text">
-                    <h1>MotoBasınç</h1>
-                    <div class="logo-sub">Pro Rehber</div>
-                </div>
-            </a>
-            <div class="search-container">
-                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-                <input type="text" class="search-input" id="searchInput" placeholder="Marka veya model arayın (örn: Pulsar, PCX, R25)...">
-            </div>
+<header>
+    <div class="nav">
+        <div class="logo">Moto<span>Basınç</span></div>
+
+        <div class="search">
+            <span class="search-icon">⌕</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Marka veya model ara..."
+            >
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge">🚀 Türkiye'nin En Kapsamlı Veritabanı (2025)</div>
-            <h2 class="hero-title">Doğru Lastik Basıncıyla<br><span class="text-gradient">Güvenli Sürüş</span></h2>
-            <p class="hero-desc">Popüler scooterlardan devasa touring motorlara kadar, Türkiye pazarındaki tüm motosikletlerin üretici onaylı ideal ön/arka lastik PSI değerlerini anında bulun.</p>
-            
-            <div class="stats-wrap">
-                <div class="stat-item">
-                    <span class="stat-num" id="brandCount">0</span>
-                    <span class="stat-label">Marka</span>
-                </div>
-                <div class="stat-div"></div>
-                <div class="stat-item">
-                    <span class="stat-num" id="modelCount">0</span>
-                    <span class="stat-label">Model</span>
-                </div>
-                <div class="stat-div"></div>
-                <div class="stat-item">
-                    <span class="stat-num">PSI</span>
-                    <span class="stat-label">Ölçü Birimi</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
 
-    <!-- AdSense Top Slot -->
-    <div class="container"><div class="ads-container"></div></div>
+    <div class="badge">
+        🏍️ Motosiklet Lastik Basıncı Rehberi
+    </div>
 
-    <!-- Main Content -->
-    <main class="container">
-        
-        <!-- Filters -->
-        <div class="filters-wrapper">
-            <div class="filters" id="filterBar">
-                <button class="filter-btn active" data-filter="all">Tümü</button>
-                <button class="filter-btn" data-filter="scooter">🛵 Scooter</button>
-                <button class="filter-btn" data-filter="commuter">🏍️ Commuter</button>
-                <button class="filter-btn" data-filter="sport">🏎️ Sport</button>
-                <button class="filter-btn" data-filter="naked">💪 Naked</button>
-                <button class="filter-btn" data-filter="touring">🛣️ Touring</button>
-                <button class="filter-btn" data-filter="adventure">🏔️ Adventure</button>
-                <button class="filter-btn" data-filter="cruiser">🦅 Cruiser</button>
-                <button class="filter-btn" data-filter="enduro">🌲 Enduro</button>
-            </div>
+    <h1>
+        Doğru Lastik Basıncıyla<br>
+        <span>Daha Güvenli Sürüş</span>
+    </h1>
+
+    <p>
+        Popüler motosikletlerin ön ve arka lastik basıncı değerlerini
+        marka ve modele göre kolayca bulun. PSI değerlerinin yanında
+        lastik ebatlarını da görüntüleyin.
+    </p>
+
+    <div class="stats">
+        <div class="stat">
+            <strong id="brandCount">0</strong>
+            <span>Marka</span>
         </div>
 
-        <!-- Grid -->
-        <div class="brands-grid" id="brandsGrid"></div>
-
-    </main>
-
-    <!-- AdSense Bottom Slot -->
-    <div class="container"><div class="ads-container"></div></div>
-
-    <!-- SEO & FAQ Section -->
-    <section class="seo-section">
-        <div class="container">
-            <h2 class="seo-title">Sıkça Sorulan Sorular</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-q">Motosiklet lastik basıncı neden bu kadar önemli? <span class="faq-icon">+</span></div>
-                    <div class="faq-a">Doğru lastik basıncı, motosikletin yol tutuşunu, fren mesafesini ve viraj kabiliyetini doğrudan etkiler. Düşük basınç lastiğin aşırı ısınmasına ve jantın zarar görmesine yol açarken, yüksek basınç temas yüzeyini azaltarak kayma riskini artırır. Ayrıca doğru basınç yakıt tasarrufu sağlar.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q">Artçı (yolcu) veya yük varken lastik basıncı değişmeli mi? <span class="faq-icon">+</span></div>
-                    <div class="faq-a">Kesinlikle. Çoğu üretici, arka selede bir yolcu veya ağır bir bagaj varken arka lastik basıncının ortalama 2-4 PSI (veya 0.2 - 0.3 Bar) artırılmasını önerir. Ön lastik genellikle aynı kalır veya çok az artırılır.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q">Kış aylarında lastik havası indirilmeli mi? <span class="faq-icon">+</span></div>
-                    <div class="faq-a">Hayır, bu yaygın bir yanılgıdır. Soğuk hava zaten lastik içindeki havanın büzüşmesine ve basıncın düşmesine neden olur. Kışın lastik basınçları daha sık (haftada bir) kontrol edilmeli ve her zaman üreticinin önerdiği standart değerlerde tutulmalıdır. İndik lastik, yağmurlu havada suyu tahliye edemez.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q">PSI ve Bar farkı nedir? Nasıl çevrilir? <span class="faq-icon">+</span></div>
-                    <div class="faq-a">PSI (Pounds per Square Inch) ve Bar, iki farklı basınç ölçü birimidir. Türkiye'deki benzinliklerde genellikle her ikisi de bulunur. 1 Bar yaklaşık olarak 14.5 PSI'a eşittir (Örn: 30 PSI ≈ 2.06 Bar). Ekranlardaki ufak farklar sürüşü devasa etkilemez ancak doğru birime baktığınızdan emin olun.</div>
-                </div>
-            </div>
+        <div class="stat">
+            <strong id="modelCount">0</strong>
+            <span>Motosiklet Modeli</span>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>MotoBasınç © 2025. Türkiye'nin En Gelişmiş Motosiklet Lastik Basıncı Rehberi.</p>
-            <p style="opacity: 0.6; font-size: 0.75rem; max-width: 600px; margin: 0 auto 20px;">Uyarı: Sitede yer alan veriler üreticilerin fabrika çıkışı standart değerleridir. Lastiğinizin markası, modeli (örn: kışlık lastik), sürüş tarzınız ve hava koşullarına göre bu değerler değişiklik gösterebilir.</p>
-            <div class="footer-links">
-                <a href="#">Gizlilik Politikası</a>
-                <a href="#">Kullanım Şartları</a>
-                <a href="#">İletişim</a>
-            </div>
+        <div class="stat">
+            <strong>PSI</strong>
+            <span>Basınç Birimi</span>
         </div>
-    </footer>
+    </div>
 
-    <script>
-    // ========== EXPANDED DATABASE FOR TURKEY MARKET ==========
-    const motorcycleData = [
-        {
-            brand: "Honda", country: "Japonya", color: "#e60000", icon: "H",
-            models: [
-                // Scooters
-                { name: "PCX 125", type: "scooter", front: 29, rear: 33, tireF: "110/70-14", tireR: "130/70-13" },
-                { name: "Forza 250 / 350", type: "scooter", front: 29, rear: 33, tireF: "120/70-15", tireR: "140/70-14" },
-                { name: "Dio 110", type: "scooter", front: 29, rear: 33, tireF: "80/90-14", tireR: "90/90-14" },
-                { name: "Activa 125", type: "scooter", front: 22, rear: 29, tireF: "90/90-12", tireR: "90/100-10" },
-                { name: "ADV 350", type: "scooter", front: 29, rear: 33, tireF: "120/70-15", tireR: "140/70-14" },
-                // Naked/Commuter
-                { name: "CB 250R", type: "naked", front: 29, rear: 33, tireF: "110/70 R17", tireR: "150/60 R17" },
-                { name: "CB 125F", type: "commuter", front: 25, rear: 29, tireF: "80/100-18", tireR: "90/90-18" },
-                { name: "CB 650R", type: "naked", front: 33, rear: 36, tireF: "120/70 ZR17", tireR: "180/55 ZR17" },
-                // Sport
-                { name: "CBR 650R", type: "sport", front: 33, rear: 36, tireF: "120/70 ZR17", tireR: "180/55 ZR17" },
-                { name: "CBR 250RR", type: "sport", front: 29, rear: 33, tireF: "110/70 R17", tireR: "140/70 R17" },
-                // Adventure
-                { name: "NC750X", type: "adventure", front: 33, rear: 36, tireF: "120/70 ZR17", tireR: "160/60 ZR17" },
-                { name: "Africa Twin 1100", type: "adventure", front: 33, rear: 36, tireF: "90/90 R21", tireR: "150/70 R18" },
-                { name: "CRF 250L / 300L", type: "enduro", front: 22, rear: 22, tireF: "80/100-21", tireR: "120/80-18" }, // Arazi kullanımı hariç asfaltta 22/22
-            ]
-        },
-        {
-            brand: "Yamaha", country: "Japonya", color: "#0033a0", icon: "Y",
-            models: [
-                // Scooters
-                { name: "NMAX 125 / 155", type: "scooter", front: 22, rear: 36, tireF: "110/70-13", tireR: "130/70-13" },
-                { name: "XMAX 250 / 300", type: "scooter", front: 29, rear: 33, tireF: "120/70-15", tireR: "140/70-14" },
-                { name: "TMAX 560", type: "scooter", front: 33, rear: 36, tireF: "120/70 R15", tireR: "160/60 R15" },
-                { name: "Delight 125", type: "scooter", front: 22, rear: 29, tireF: "90/90-12", tireR: "100/90-10" },
-                // Sport & Naked
-                { name: "YZF-R25", type: "sport", front: 29, rear: 33, tireF: "110/70-17", tireR: "140/70-17" },
-                { name: "MT-25", type: "naked", front: 29, rear: 33, tireF: "110/70-17", tireR: "140/70-17" },
-                { name: "MT-07", type: "naked", front: 33, rear: 36, tireF: "120/70 ZR17", tireR: "180/55 ZR17" },
-                { name: "MT-09", type: "naked", front: 36, rear: 42, tireF: "120/70 ZR17", tireR: "180/55 ZR17" },
-                // Adventure
-                { name: "Ténéré 700", type: "adventure", front: 33, rear: 36, tireF: "90/90 R21", tireR: "150/70 R18" },
-                { name: "Tracer 7", type: "touring", front: 33, rear: 36, tireF: "120/70 ZR17", tireR: "180/55 ZR17" },
-                { name: "Tracer 9", type: "touring", front: 36, rear: 42, tireF: "120/70 ZR17", tireR: "180/55 ZR17" },
-            ]
-        },
-        {
-            brand: "Bajaj", country: "Hindistan", color: "#0f52ba", icon: "B",
-            models: [
-                { name: "Pulsar NS 200", type: "naked", front: 28, rear: 32, tireF: "100/80-17", tireR: "130/70-17" },
-                { name: "Pulsar RS 200", type: "sport", front: 28, rear: 32, tireF: "100/80-17", tireR: "130/70-17" },
-                { name: "Dominar 400", type: "touring", front: 29, rear: 32, tireF: "110/70 R17", tireR: "150/60 R17" },
-                { name: "Dominar 250", type: "touring", front: 29, rear: 32, tireF: "100/80-17", tireR: "130/70-17" },
-                { name: "Pulsar N250", type: "naked", front: 28, rear: 32, tireF: "100/80-17", tireR: "130/70-17" },
-                { name: "Avenger 220 Cruise", type: "cruiser", front: 21, rear: 28, tireF: "90/90-17", tireR: "130/90-15" }
-            ]
-        },
-        {
-            brand: "CFMoto", country: "Çin", color: "#00a3e0", icon: "CF",
-            models: [
-                { name: "250 SR", type: "sport", front: 29, rear: 33, tireF: "110/70 R17", tireR: "140/60 R17" },
-                { name: "450 SR", type: "sport", front: 32, rear: 36, tireF: "110/70 R17", tireR: "150/60 R17" },
-                { name: "250 NK", type: "naked", front: 29, rear: 33, tireF: "110/70 R17", tireR: "140/60 R17" },
-                { name: "400 NK", type: "naked", front: 32, rear: 36, tireF: "120/70 ZR17", tireR: "160/60 ZR17" },
-                { name: "650 MT", type: "adventure", front: 36, rear: 40, tireF: "120/70 ZR17", tireR: "160/60 ZR17" },
-                { name: "800 MT", type: "adventure", front: 35, rear: 41, tireF: "110/80 R19", tireR: "150/70 R17" }
-            ]
-        },
-        {
-            brand: "TVS", country: "Hindistan", color: "#e31837", icon: "T",
-            models: [
-                { name: "Apache RTR 200 4V", type: "naked", front: 25, rear: 28, tireF: "90/90-17", tireR: "130/70-17" },
-                { name: "Apache RTR 160", type: "naked", front: 25, rear: 28, tireF: "90/90-17", tireR: "110/80-17" },
-                { name: "Raider 125", type: "commuter", front: 25, rear: 28, tireF: "80/100-17", tireR: "100/90-17" },
-                { name: "Jupiter 125", type: "scooter", front: 24, rear: 32, tireF: "90/90-12", tireR: "90/90-12" },
-                { name: "Ntorq 125", type: "scooter", front: 24, rear: 32, tireF: "100/80-12", tireR: "110/80-12" }
-            ]
-        },
-        {
-            brand: "Kuba / RKS", country: "Türkiye / Çin", color: "#222222", icon: "KR",
-            models: [
-                { name: "Kuba Superlight 200", type: "cruiser", front: 28, rear: 32, tireF: "110/90-16", tireR: "130/90-15" },
-                { name: "Kuba TK03", type: "commuter", front: 28, rear: 32, tireF: "2.75-18", tireR: "90/90-18" },
-                { name: "Kuba Space 50", type: "scooter", front: 28, rear: 30, tireF: "3.50-10", tireR: "3.50-10" },
-                { name: "RKS Spontini 110", type: "scooter", front: 28, rear: 32, tireF: "90/90-12", tireR: "3.50-10" },
-                { name: "RKS Titanic 150", type: "naked", front: 28, rear: 32, tireF: "90/90-17", tireR: "110/80-17" },
-                { name: "RKS Bitter 50 / 125", type: "scooter", front: 28, rear: 30, tireF: "90/90-12", tireR: "90/90-12" }
-            ]
-        },
-        {
-            brand: "SYM", country: "Tayvan", color: "#d91b22", icon: "S",
-            models: [
-                { name: "Joymax Z+ 250", type: "scooter", front: 29, rear: 33, tireF: "120/70-14", tireR: "140/60-13" },
-                { name: "Fiddle 4 (125/150)", type: "scooter", front: 26, rear: 30, tireF: "110/70-12", tireR: "120/70-12" },
-                { name: "Jet 14 200", type: "scooter", front: 26, rear: 32, tireF: "100/90-14", tireR: "110/80-14" },
-                { name: "Cruisym 250", type: "scooter", front: 29, rear: 33, tireF: "120/70-14", tireR: "140/60-13" }
-            ]
-        },
-        {
-            brand: "Kymco", country: "Tayvan", color: "#005596", icon: "Ky",
-            models: [
-                { name: "X-Town 250", type: "scooter", front: 29, rear: 33, tireF: "120/80-14", tireR: "150/70-13" },
-                { name: "Agility 125", type: "scooter", front: 25, rear: 29, tireF: "120/70-12", tireR: "130/70-12" },
-                { name: "AK 550", type: "scooter", front: 33, rear: 36, tireF: "120/70-15", tireR: "160/60-15" },
-                { name: "Downtown 250", type: "scooter", front: 29, rear: 33, tireF: "120/80-14", tireR: "150/70-13" }
-            ]
-        },
-        {
-            brand: "Suzuki", country: "Japonya", color: "#005da2", icon: "Sz",
-            models: [
-                { name: "Burgman 400", type: "scooter", front: 25, rear: 29, tireF: "120/70-15", tireR: "150/70-13" },
-                { name: "Address 110 / 125", type: "scooter", front: 25, rear: 33, tireF: "90/90-14", tireR: "90/90-14" },
-                { name: "V-Strom 250", type: "adventure", front: 33, rear: 36, tireF: "110/80-17", tireR: "140/70-17" },
-                { name: "V-Strom 650", type: "adventure", front: 33, rear: 36, tireF: "110/80-19", tireR: "150/70-17" },
-                { name: "GSX-R 250", type: "sport", front: 29, rear: 33, tireF: "110/80-17", tireR: "140/70-17" },
-                { name: "SV 650", type: "naked", front: 33, rear: 36, tireF: "120/70-17", tireR: "160/60-17" }
-            ]
-        },
-        {
-            brand: "Kawasaki", country: "Japonya", color: "#4caf50", icon: "Kw",
-            models: [
-                { name: "Ninja 250 SL", type: "sport", front: 28, rear: 32, tireF: "100/80-17", tireR: "130/70-17" },
-                { name: "Ninja 400", type: "sport", front: 29, rear: 33, tireF: "110/70-17", tireR: "150/60-17" },
-                { name: "Z250 SL", type: "naked", front: 28, rear: 32, tireF: "100/80-17", tireR: "130/70-17" },
-                { name: "Z400", type: "naked", front: 29, rear: 33, tireF: "110/70-17", tireR: "150/60-17" },
-                { name: "Versys 650", type: "adventure", front: 33, rear: 36, tireF: "120/70-17", tireR: "160/60-17" }
-            ]
-        }
-    ];
+</section>
 
-    // ========== APP LOGIC ==========
-    document.addEventListener('DOMContentLoaded', () => {
-        initHeader();
-        initSearch();
-        initFilters();
-        initFaq();
-        renderBrands(motorcycleData);
-        updateStats(motorcycleData);
+<div class="ad">
+    Reklam alanı
+</div>
+
+<main class="container">
+
+    <div class="filters">
+
+        <button class="filter active" data-type="all">
+            Tümü
+        </button>
+
+        <button class="filter" data-type="scooter">
+            Scooter
+        </button>
+
+        <button class="filter" data-type="commuter">
+            Commuter
+        </button>
+
+        <button class="filter" data-type="sport">
+            Sport
+        </button>
+
+        <button class="filter" data-type="naked">
+            Naked
+        </button>
+
+        <button class="filter" data-type="touring">
+            Touring
+        </button>
+
+        <button class="filter" data-type="adventure">
+            Adventure
+        </button>
+
+        <button class="filter" data-type="cruiser">
+            Cruiser
+        </button>
+
+    </div>
+
+    <div id="brands"></div>
+
+    <div class="no-result" id="noResult">
+        Aradığın model bulunamadı.
+    </div>
+
+    <h2 class="section-title">
+        Sık Sorulan Sorular
+    </h2>
+
+    <div class="faq">
+        <div class="faq-q">
+            Motosiklet lastik basıncı kaç PSI olmalı?
+            <span>+</span>
+        </div>
+
+        <div class="faq-a">
+            Lastik basıncı motosiklet modeline, lastik ölçüsüne ve yük durumuna
+            göre değişir. Buradaki değerleri referans olarak kullanın ve mümkünse
+            motosikletinizin kullanım kılavuzundaki veya üreticinin motosiklet
+            üzerindeki etiketindeki değeri esas alın.
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="faq-q">
+            Lastik basıncı sıcak mı soğuk mu ölçülür?
+            <span>+</span>
+        </div>
+
+        <div class="faq-a">
+            Lastik basıncının soğuk lastikte kontrol edilmesi önerilir.
+            Uzun süre sürüş yaptıktan hemen sonra yapılan ölçüm gerçek soğuk
+            basınç değerini göstermeyebilir.
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="faq-q">
+            Artçı varken arka lastik basıncı değişir mi?
+            <span>+</span>
+        </div>
+
+        <div class="faq-a">
+            Evet, bazı motosikletlerde artçı veya yük taşırken üretici daha yüksek
+            bir arka lastik basıncı belirtir. Bu nedenle artçıyla kullanımda
+            motosikletinizin kullanım kılavuzundaki değeri kontrol edin.
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="faq-q">
+            PSI yerine bar kullanabilir miyim?
+            <span>+</span>
+        </div>
+
+        <div class="faq-a">
+            Evet. 1 bar yaklaşık 14.5 PSI değerindedir. Sitede PSI değerinin
+            yanında yaklaşık bar karşılığı da gösterilmektedir.
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <strong>MotoBasınç</strong> © 2026.
+    Motosiklet Lastik Basıncı Rehberi.
+    <br><br>
+    <span>
+        Buradaki değerler referans amaçlıdır. Lastik basıncında öncelikli olarak
+        motosiklet üreticisinin kullanım kılavuzu ve motosiklet üzerindeki
+        üretici etiketindeki değerleri dikkate alın.
+    </span>
+</footer>
+
+<script>
+
+const typeLabels = {
+    scooter: "Scooter",
+    commuter: "Commuter",
+    sport: "Sport",
+    naked: "Naked",
+    touring: "Touring",
+    adventure: "Adventure",
+    cruiser: "Cruiser"
+};
+
+const motorcycles = [
+
+/* =========================
+   HONDA
+========================= */
+
+{
+    brand: "Honda",
+    name: "PCX 125",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-14",
+    tireR: "130/70-13"
+},
+
+{
+    brand: "Honda",
+    name: "Forza 250",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "120/70-15",
+    tireR: "140/70-14"
+},
+
+{
+    brand: "Honda",
+    name: "Forza 350",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "120/70-15",
+    tireR: "140/70-14"
+},
+
+{
+    brand: "Honda",
+    name: "ADV 350",
+    type: "adventure",
+    front: 29,
+    rear: 33,
+    tireF: "120/70-15",
+    tireR: "140/70-14"
+},
+
+{
+    brand: "Honda",
+    name: "CB 250R",
+    type: "naked",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "150/60-17"
+},
+
+{
+    brand: "Honda",
+    name: "CBR 250RR",
+    type: "sport",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Honda",
+    name: "CB 650R",
+    type: "naked",
+    front: 36,
+    rear: 42,
+    tireF: "120/70-ZR17",
+    tireR: "180/55-ZR17"
+},
+
+{
+    brand: "Honda",
+    name: "CBR 650R",
+    type: "sport",
+    front: 36,
+    rear: 42,
+    tireF: "120/70-ZR17",
+    tireR: "180/55-ZR17"
+},
+
+/* =========================
+   YAMAHA
+========================= */
+
+{
+    brand: "Yamaha",
+    name: "NMAX 125",
+    type: "scooter",
+    front: 22,
+    rear: 36,
+    tireF: "110/70-13",
+    tireR: "130/70-13"
+},
+
+{
+    brand: "Yamaha",
+    name: "XMAX 250",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "120/70-15",
+    tireR: "140/70-14"
+},
+
+{
+    brand: "Yamaha",
+    name: "XMAX 300",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "120/70-15",
+    tireR: "140/70-14"
+},
+
+{
+    brand: "Yamaha",
+    name: "YZF-R25",
+    type: "sport",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Yamaha",
+    name: "MT-25",
+    type: "naked",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Yamaha",
+    name: "MT-125",
+    type: "naked",
+    front: 29,
+    rear: 33,
+    tireF: "100/80-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Yamaha",
+    name: "R125",
+    type: "sport",
+    front: 29,
+    rear: 33,
+    tireF: "100/80-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Yamaha",
+    name: "MT-07",
+    type: "naked",
+    front: 33,
+    rear: 36,
+    tireF: "120/70-ZR17",
+    tireR: "180/55-ZR17"
+},
+
+/* =========================
+   MONDIAL
+========================= */
+
+{
+    brand: "Mondial",
+    name: "125 Drift L",
+    type: "commuter",
+    front: 29,
+    rear: 33,
+    tireF: "90/90-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "Mondial",
+    name: "125 Drift",
+    type: "commuter",
+    front: 29,
+    rear: 33,
+    tireF: "90/90-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "Mondial",
+    name: "125 MH Drift",
+    type: "commuter",
+    front: 29,
+    rear: 32,
+    tireF: "90/90-18",
+    tireR: "110/80-18"
+},
+
+{
+    brand: "Mondial",
+    name: "125 Vulture",
+    type: "commuter",
+    front: 29,
+    rear: 32,
+    tireF: "90/90-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "Mondial",
+    name: "125 Superboy",
+    type: "commuter",
+    front: 29,
+    rear: 32,
+    tireF: "2.75-17",
+    tireR: "3.00-17"
+},
+
+{
+    brand: "Mondial",
+    name: "125 ZNU",
+    type: "scooter",
+    front: 29,
+    rear: 32,
+    tireF: "3.50-10",
+    tireR: "3.50-10"
+},
+
+/* =========================
+   RKS
+========================= */
+
+{
+    brand: "RKS",
+    name: "RK125S",
+    type: "commuter",
+    front: 29,
+    rear: 32,
+    tireF: "90/90-17",
+    tireR: "120/80-17"
+},
+
+{
+    brand: "RKS",
+    name: "RZ125X",
+    type: "naked",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "RKS",
+    name: "SRK125R",
+    type: "sport",
+    front: 28,
+    rear: 30,
+    tireF: "110/80-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "RKS",
+    name: "R125",
+    type: "sport",
+    front: 29,
+    rear: 33,
+    tireF: "100/80-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "RKS",
+    name: "Newlight 125",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "90/90-12",
+    tireR: "100/90-10"
+},
+
+{
+    brand: "RKS",
+    name: "Blackwolf 250",
+    type: "cruiser",
+    front: 32,
+    rear: 36,
+    tireF: "110/90-16",
+    tireR: "140/90-15"
+},
+
+{
+    brand: "RKS",
+    name: "LTR 125",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "90/90-14",
+    tireR: "100/90-14"
+},
+
+/* =========================
+   BAJAJ
+========================= */
+
+{
+    brand: "Bajaj",
+    name: "Pulsar NS 125",
+    type: "naked",
+    front: 25,
+    rear: 28,
+    tireF: "80/100-17",
+    tireR: "100/90-17"
+},
+
+{
+    brand: "Bajaj",
+    name: "Pulsar NS 160",
+    type: "naked",
+    front: 25,
+    rear: 28,
+    tireF: "90/90-17",
+    tireR: "120/80-17"
+},
+
+{
+    brand: "Bajaj",
+    name: "Pulsar NS 200",
+    type: "naked",
+    front: 25,
+    rear: 28,
+    tireF: "100/80-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "Bajaj",
+    name: "Pulsar RS 200",
+    type: "sport",
+    front: 25,
+    rear: 28,
+    tireF: "100/80-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "Bajaj",
+    name: "Dominar 250",
+    type: "touring",
+    front: 29,
+    rear: 33,
+    tireF: "100/80-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "Bajaj",
+    name: "Dominar 400",
+    type: "touring",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "150/60-17"
+},
+
+/* =========================
+   TVS
+========================= */
+
+{
+    brand: "TVS",
+    name: "Raider 125",
+    type: "commuter",
+    front: 25,
+    rear: 28,
+    tireF: "80/100-17",
+    tireR: "100/90-17"
+},
+
+{
+    brand: "TVS",
+    name: "Apache RTR 160",
+    type: "naked",
+    front: 25,
+    rear: 28,
+    tireF: "90/90-17",
+    tireR: "120/70-17"
+},
+
+{
+    brand: "TVS",
+    name: "Apache RTR 200 4V",
+    type: "naked",
+    front: 25,
+    rear: 28,
+    tireF: "90/90-17",
+    tireR: "130/70-17"
+},
+
+{
+    brand: "TVS",
+    name: "Ntorq 125",
+    type: "scooter",
+    front: 24,
+    rear: 34,
+    tireF: "100/80-12",
+    tireR: "100/80-12"
+},
+
+/* =========================
+   CFMOTO
+========================= */
+
+{
+    brand: "CFMOTO",
+    name: "250 NK",
+    type: "naked",
+    front: 33,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "140/60-17"
+},
+
+{
+    brand: "CFMOTO",
+    name: "250 SR",
+    type: "sport",
+    front: 33,
+    rear: 36,
+    tireF: "110/70-17",
+    tireR: "140/60-17"
+},
+
+{
+    brand: "CFMOTO",
+    name: "450 SR",
+    type: "sport",
+    front: 33,
+    rear: 36,
+    tireF: "110/70-17",
+    tireR: "150/60-17"
+},
+
+{
+    brand: "CFMOTO",
+    name: "450 NK",
+    type: "naked",
+    front: 33,
+    rear: 36,
+    tireF: "110/70-17",
+    tireR: "150/60-17"
+},
+
+{
+    brand: "CFMOTO",
+    name: "650 MT",
+    type: "adventure",
+    front: 36,
+    rear: 41,
+    tireF: "120/70-17",
+    tireR: "160/60-17"
+},
+
+/* =========================
+   KUBA
+========================= */
+
+{
+    brand: "Kuba",
+    name: "Superlight 125",
+    type: "cruiser",
+    front: 29,
+    rear: 32,
+    tireF: "90/90-18",
+    tireR: "130/90-15"
+},
+
+{
+    brand: "Kuba",
+    name: "Superlight 200",
+    type: "cruiser",
+    front: 29,
+    rear: 32,
+    tireF: "90/90-18",
+    tireR: "130/90-15"
+},
+
+{
+    brand: "Kuba",
+    name: "Bluebird 125",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "90/90-12",
+    tireR: "100/90-10"
+},
+
+{
+    brand: "Kuba",
+    name: "Space 50",
+    type: "scooter",
+    front: 29,
+    rear: 32,
+    tireF: "3.50-10",
+    tireR: "3.50-10"
+},
+
+{
+    brand: "Kuba",
+    name: "Dragon 50",
+    type: "scooter",
+    front: 29,
+    rear: 32,
+    tireF: "3.50-10",
+    tireR: "3.50-10"
+},
+
+{
+    brand: "Kuba",
+    name: "Black Cat",
+    type: "scooter",
+    front: 29,
+    rear: 32,
+    tireF: "3.50-10",
+    tireR: "3.50-10"
+},
+
+/* =========================
+   SYM
+========================= */
+
+{
+    brand: "SYM",
+    name: "Fiddle 4 125",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-12",
+    tireR: "120/70-12"
+},
+
+{
+    brand: "SYM",
+    name: "Jet 14 200",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "100/90-14",
+    tireR: "110/80-14"
+},
+
+{
+    brand: "SYM",
+    name: "Joymax Z+ 250",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "120/70-14",
+    tireR: "140/60-13"
+},
+
+{
+    brand: "SYM",
+    name: "Cruisym 250",
+    type: "scooter",
+    front: 29,
+    rear: 33,
+    tireF: "120/70-14",
+    tireR: "140/60-13"
+},
+
+/* =========================
+   SUZUKI
+========================= */
+
+{
+    brand: "Suzuki",
+    name: "GSX-R 250",
+    type: "sport",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Suzuki",
+    name: "SV 650",
+    type: "naked",
+    front: 33,
+    rear: 36,
+    tireF: "120/70-17",
+    tireR: "160/60-17"
+},
+
+{
+    brand: "Suzuki",
+    name: "V-Strom 250",
+    type: "adventure",
+    front: 29,
+    rear: 33,
+    tireF: "110/80-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Suzuki",
+    name: "V-Strom 650",
+    type: "adventure",
+    front: 33,
+    rear: 36,
+    tireF: "110/80R19",
+    tireR: "150/70R17"
+},
+
+{
+    brand: "Suzuki",
+    name: "Burgman 400",
+    type: "scooter",
+    front: 32,
+    rear: 36,
+    tireF: "120/70-15",
+    tireR: "150/70-13"
+},
+
+/* =========================
+   KAWASAKI
+========================= */
+
+{
+    brand: "Kawasaki",
+    name: "Ninja 250",
+    type: "sport",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Kawasaki",
+    name: "Ninja 400",
+    type: "sport",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "150/60-17"
+},
+
+{
+    brand: "Kawasaki",
+    name: "Z250",
+    type: "naked",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "140/70-17"
+},
+
+{
+    brand: "Kawasaki",
+    name: "Z400",
+    type: "naked",
+    front: 29,
+    rear: 33,
+    tireF: "110/70-17",
+    tireR: "150/60-17"
+},
+
+{
+    brand: "Kawasaki",
+    name: "Versys 650",
+    type: "adventure",
+    front: 33,
+    rear: 36,
+    tireF: "120/70-17",
+    tireR: "160/60-17"
+}
+
+];
+
+
+/* =========================
+   RENDER
+========================= */
+
+const brandsContainer = document.getElementById("brands");
+const searchInput = document.getElementById("searchInput");
+const noResult = document.getElementById("noResult");
+
+function psiToBar(psi) {
+    return (psi * 0.0689476).toFixed(2);
+}
+
+function renderBrands(filter = "all", search = "") {
+
+    brandsContainer.innerHTML = "";
+
+    const query = search.toLowerCase().trim();
+
+    const filtered = motorcycles.filter(moto => {
+
+        const matchesType =
+            filter === "all" || moto.type === filter;
+
+        const matchesSearch =
+            !query ||
+            moto.brand.toLowerCase().includes(query) ||
+            moto.name.toLowerCase().includes(query);
+
+        return matchesType && matchesSearch;
     });
 
-    // Sticky Header
-    function initHeader() {
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) header.classList.add('scrolled');
-            else header.classList.remove('scrolled');
-        });
-    }
+    const grouped = {};
 
-    // Stats Counter
-    function updateStats(data) {
-        let brandC = data.length;
-        let modelC = data.reduce((acc, curr) => acc + curr.models.length, 0);
-        
-        animateVal("brandCount", brandC);
-        animateVal("modelCount", modelC);
-    }
-    
-    function animateVal(id, end) {
-        let current = 0;
-        let stepTime = Math.abs(Math.floor(1000 / end));
-        let obj = document.getElementById(id);
-        let timer = setInterval(() => {
-            current += 1;
-            obj.innerHTML = current;
-            if (current == end) clearInterval(timer);
-        }, stepTime);
-    }
+    filtered.forEach(moto => {
 
-    // Filters
-    let activeFilter = 'all';
-    function initFilters() {
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-                activeFilter = e.target.dataset.filter;
-                applySearchAndFilter();
-            });
-        });
-    }
-
-    // Search
-    function initSearch() {
-        const input = document.getElementById('searchInput');
-        input.addEventListener('input', () => applySearchAndFilter());
-    }
-
-    function applySearchAndFilter() {
-        const query = document.getElementById('searchInput').value.toLowerCase().trim();
-        
-        const filtered = motorcycleData.map(brand => {
-            let models = brand.models;
-            
-            // Apply category filter
-            if (activeFilter !== 'all') {
-                models = models.filter(m => m.type === activeFilter);
-            }
-            
-            // Apply search query
-            if (query) {
-                const brandMatch = brand.brand.toLowerCase().includes(query);
-                if (!brandMatch) {
-                    models = models.filter(m => m.name.toLowerCase().includes(query));
-                }
-            }
-            
-            if (models.length === 0) return null;
-            return { ...brand, models };
-        }).filter(Boolean);
-
-        renderBrands(filtered, query.length > 0);
-    }
-
-    // Rendering
-    function renderBrands(data, autoExpand = false) {
-        const grid = document.getElementById('brandsGrid');
-        grid.innerHTML = '';
-
-        if(data.length === 0) {
-            grid.innerHTML = `<div style="text-align:center; padding: 60px 20px; color: var(--text-tertiary); grid-column: 1/-1;">
-                <svg style="width:64px;height:64px;margin-bottom:16px;opacity:0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-                <h3>Sonuç Bulunamadı</h3>
-                <p>Aradığınız kriterlere uygun model bulunamadı.</p>
-            </div>`;
-            return;
+        if (!grouped[moto.brand]) {
+            grouped[moto.brand] = [];
         }
 
-        data.forEach(brand => {
-            const card = document.createElement('div');
-            card.className = `brand-card ${autoExpand ? 'open' : ''}`;
-            
-            const modelsHTML = brand.models.map(m => `
-                <div class="model-card">
-                    <div class="model-head">
-                        <div class="model-name">${m.name}</div>
-                        <div class="type-badge type-${m.type}">${m.type}</div>
-                    </div>
-                    <div class="pressures">
-                        <div class="pressure-box front">
-                            <div class="p-label">Ön Lastik</div>
-                            <div class="p-val">${m.front}</div>
-                            <div class="p-unit">PSI</div>
-                        </div>
-                        <div class="pressure-box rear">
-                            <div class="p-label">Arka Lastik</div>
-                            <div class="p-val">${m.rear}</div>
-                            <div class="p-unit">PSI</div>
-                        </div>
-                    </div>
-                    <div class="tire-info">
-                        Ebat: Ön ${m.tireF} / Arka ${m.tireR}
-                    </div>
-                </div>
-            `).join('');
+        grouped[moto.brand].push(moto);
+    });
 
-            card.innerHTML = `
-                <div class="brand-header">
-                    <div class="brand-info">
-                        <div class="brand-logo" style="background: linear-gradient(135deg, ${brand.color}, #111);">${brand.icon}</div>
-                        <div class="brand-text">
-                            <h3>${brand.brand}</h3>
-                            <div class="brand-tags">
-                                <span class="tag">${brand.country}</span>
-                                <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa">${brand.models.length} Model</span>
-                            </div>
+    const brands = Object.keys(grouped);
+
+    noResult.style.display =
+        brands.length === 0 ? "block" : "none";
+
+    brands.forEach(brand => {
+
+        const card = document.createElement("div");
+        card.className = "brand-card";
+
+        const modelsHTML = grouped[brand].map(moto => {
+
+            const frontBar = psiToBar(moto.front);
+            const rearBar = psiToBar(moto.rear);
+
+            return `
+                <div class="model-item">
+
+                    <div class="model-header">
+
+                        <div class="model-name">
+
+                            ${moto.name}
+
+                            <span class="type-badge">
+                                ${typeLabels[moto.type]}
+                            </span>
+
                         </div>
+
+                        <div class="model-toggle">
+                            ↓
+                        </div>
+
                     </div>
-                    <div class="toggle-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+
+                    <div class="pressure-container">
+
+                        <div class="pressure-details">
+
+                            <div class="pressure-card">
+
+                                <div class="pressure-label">
+                                    Ön Lastik
+                                </div>
+
+                                <div class="pressure-value">
+                                    ${moto.front}
+                                </div>
+
+                                <div class="pressure-unit">
+                                    PSI
+                                </div>
+
+                                <div class="pressure-bar">
+                                    ${frontBar} bar
+                                </div>
+
+                            </div>
+
+
+                            <div class="pressure-card">
+
+                                <div class="pressure-label">
+                                    Arka Lastik
+                                </div>
+
+                                <div class="pressure-value">
+                                    ${moto.rear}
+                                </div>
+
+                                <div class="pressure-unit">
+                                    PSI
+                                </div>
+
+                                <div class="pressure-bar">
+                                    ${rearBar} bar
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tire-size">
+                            🛞 Ön: ${moto.tireF}
+                            &nbsp; • &nbsp;
+                            Arka: ${moto.tireR}
+                        </div>
+
+
+                        <div class="warning">
+                            ⚠️ Bu değer referans amaçlıdır.
+                            Lastik basıncını motosikletinizin kullanım
+                            kılavuzundaki veya üretici etiketindeki
+                            değerle karşılaştırın. Basıncı soğuk lastikte kontrol edin.
+                        </div>
+
                     </div>
-                </div>
-                <div class="models-container">
-                    <div class="models-inner">
-                        ${modelsHTML}
-                    </div>
+
                 </div>
             `;
 
-            card.querySelector('.brand-header').addEventListener('click', () => {
-                card.classList.toggle('open');
+        }).join("");
+
+
+        card.innerHTML = `
+
+            <div class="brand-header">
+
+                <div class="brand-name">
+
+                    ${brand}
+
+                    <span class="brand-count">
+                        ${grouped[brand].length} model
+                    </span>
+
+                </div>
+
+                <div class="arrow">
+                    ↓
+                </div>
+
+            </div>
+
+            <div class="models">
+                ${modelsHTML}
+            </div>
+        `;
+
+
+        const brandHeader =
+            card.querySelector(".brand-header");
+
+        brandHeader.addEventListener("click", () => {
+
+            card.classList.toggle("open");
+
+        });
+
+
+        card.querySelectorAll(".model-header")
+            .forEach(header => {
+
+                header.addEventListener("click", event => {
+
+                    event.stopPropagation();
+
+                    const model =
+                        header.parentElement;
+
+                    model.classList.toggle("open");
+
+                });
+
             });
 
-            grid.appendChild(card);
-        });
-    }
 
-    // FAQ Accordion
-    function initFaq() {
-        document.querySelectorAll('.faq-q').forEach(q => {
-            q.addEventListener('click', () => {
-                const item = q.parentElement;
-                const isOpen = item.classList.contains('open');
-                
-                // Close all
-                document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
-                
-                // Open clicked
-                if (!isOpen) item.classList.add('open');
-            });
+        brandsContainer.appendChild(card);
+
+    });
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+document.querySelectorAll(".filter")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            document.querySelectorAll(".filter")
+                .forEach(btn =>
+                    btn.classList.remove("active")
+                );
+
+            button.classList.add("active");
+
+            renderBrands(
+                button.dataset.type,
+                searchInput.value
+            );
+
         });
-    }
-    </script>
+
+    });
+
+
+/* =========================
+   SEARCH
+========================= */
+
+searchInput.addEventListener("input", () => {
+
+    const activeFilter =
+        document.querySelector(".filter.active");
+
+    renderBrands(
+        activeFilter.dataset.type,
+        searchInput.value
+    );
+
+});
+
+
+/* =========================
+   FAQ
+========================= */
+
+document.querySelectorAll(".faq-q")
+    .forEach(question => {
+
+        question.addEventListener("click", () => {
+
+            const faq =
+                question.parentElement;
+
+            faq.classList.toggle("open");
+
+            const symbol =
+                question.querySelector("span");
+
+            symbol.textContent =
+                faq.classList.contains("open")
+                    ? "−"
+                    : "+";
+
+        });
+
+    });
+
+
+/* =========================
+   STATS
+========================= */
+
+const uniqueBrands =
+    new Set(motorcycles.map(m => m.brand)).size;
+
+document.getElementById("brandCount")
+    .textContent = uniqueBrands;
+
+document.getElementById("modelCount")
+    .textContent = motorcycles.length;
+
+
+/* =========================
+   INITIAL
+========================= */
+
+renderBrands();
+
+</script>
+
 </body>
 </html>
